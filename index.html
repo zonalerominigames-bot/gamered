@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página de Fútbol Fan</title>
+
+  <!-- 🎨 ESTILOS BÁSICOS -->
+  <style>
+    /* Colores, fuente y tamaño base */
+    :root {
+      --rojo: #e53935;
+      --fondo-oscuro: #0f1720;
+      --gris: #6b7280;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #071025 0%, #0f2130 100%);
+      color: white;
+      line-height: 1.5;
+    }
+
+    /* Contenedor general para centrar contenido */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* ====== MENÚ SUPERIOR ====== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: .5rem;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+    }
+
+    /* Espacio para el contenido principal */
+    main { margin-top: 100px; }
+
+    /* ====== SECCIONES ====== */
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    /* Galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem 0;
+      text-align: center;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== ENCABEZADO Y MENÚ ====== -->
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <!-- LOGO DEL SITIO -->
+      <h2>⚽ Fútbol Fan</h2>
+
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#equipos">Equipos</a></li>
+          <li><a href="#jugadores">Jugadores</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 🏠 SECCIÓN INICIO -->
+    <section id="inicio">
+      <h1>Bienvenido a Fútbol Fan</h1>
+      <p>Esta página está dedicada a los amantes del fútbol. Aquí podrás ver equipos, jugadores y fotos de partidos importantes.</p>
+
+      <!-- 💡 Aquí puedes colocar una imagen principal (por ejemplo, de un estadio o balón de fútbol) -->
+      <!-- Ejemplo: -->
+      <!-- <img src="https://img.pikbest.com/ai/illus_our/20230427/5ce0ecc16d825823424af2b6880143b6.jpg!w700wp" alt="https://img.pikbest.com/ai/illus_our/20230427/5ce0ecc16d825823424af2b6880143b6.jpg!w700wp" style="width:100%;border-radius:10px;"> -->
+    </section>
+
+    <!-- ⚽ SECCIÓN EQUIPOS -->
+    <section id="equipos">
+      <h2>Equipos destacados</h2>
+
+      <!-- Cada bloque representa un equipo -->
+      <div class="card">
+        <!-- Puedes reemplazar este texto o poner el logo del equipo -->
+        <!-- Ejemplo: <img src="images/logo-equipo1.png" alt="Logo del Club Atlético Ciudad" width="80"> -->
+        <h3>Club Atlético Ciudad</h3>
+        <p>Fundado en 1904 — Estadio Ciudad Arena</p>
+      </div>
+
+      <div class="card">
+        <!-- <img src="images/logo-equipo2.png" alt="Logo del Unión Nacional" width="80"> -->
+        <h3>Unión Nacional</h3>
+        <p>Fundado en 1921 — Estadio Unión Park</p>
+      </div>
+
+      <div class="card">
+        <!-- <img src="images/logo-equipo3.png" alt="Logo del Fútbol Club Aurora" width="80"> -->
+        <h3>Fútbol Club Aurora</h3>
+        <p>Fundado en 1978 — Estadio Aurora Coliseum</p>
+      </div>
+    </section>
+
+    <!-- 👟 SECCIÓN JUGADORES -->
+    <section id="jugadores">
+      <h2>Jugadores a seguir</h2>
+
+      <!-- Cada bloque representa un jugador -->
+      <div class="card">
+        <!-- Reemplaza esta imagen con la foto real del jugador -->
+        <img src="images/jugador1.jpg" alt="Foto de Diego Pérez" style="width:100%;border-radius:10px;">
+        <h3>Diego Pérez</h3>
+        <p>Delantero — Club Atlético Ciudad</p>
+      </div>
+
+      <div class="card">
+        <img src="images/jugador2.jpg" alt="Foto de Luis Gómez" style="width:100%;border-radius:10px;">
+        <h3>Luis Gómez</h3>
+        <p>Centrocampista — Unión Nacional</p>
+      </div>
+
+      <div class="card">
+        <img src="images/jugador3.jpg" alt="Foto de Manuel Soto" style="width:100%;border-radius:10px;">
+        <h3>Manuel Soto</h3>
+        <p>Defensa — Fútbol Club Aurora</p>
+      </div>
+    </section>
+
+    <!-- 🏟️ SECCIÓN GALERÍA -->
+    <section id="galeria">
+      <h2>Galería de imágenes</h2>
+      <p>Aquí puedes mostrar tus mejores fotos de partidos, aficionados o estadios.</p>
+
+      <div class="gallery">
+        <!-- 🖼️ Imagen 1 -->
+        <div>
+          <!-- Reemplaza con tu foto real -->
+          <img src="images/goleada.jpg" alt="Jugadores celebrando un gol">
+          <p>Celebración de gol</p>
+        </div>
+
+        <!-- 🖼️ Imagen 2 -->
+        <div>
+          <img src="images/estadio-lleno.jpg" alt="Vista panorámica del estadio">
+          <p>Estadio lleno</p>
+        </div>
+
+        <!-- 🖼️ Imagen 3 -->
+        <div>
+          <img src="images/toma-aerea.jpg" alt="Vista aérea del campo de fútbol">
+          <p>Toma aérea del campo</p>
+        </div>
+
+        <!-- 🖼️ Imagen 4 -->
+        <div>
+          <img src="images/fan-zone.jpg" alt="Aficionados con banderas">
+          <p>Fan zone</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📩 SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes fotos o noticias que quieras compartir? Mándanos un mensaje.</p>
+
+      <form>
+        <!-- Nombre -->
+        <input type="text" name="nombre" placeholder="Tu nombre" required style="width:100%;margin-bottom:10px;padding:10px;border-radius:8px;">
+
+        <!-- Correo -->
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required style="width:100%;margin-bottom:10px;padding:10px;border-radius:8px;">
+
+        <!-- Mensaje -->
+        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." style="width:100%;margin-bottom:10px;padding:10px;border-radius:8px;"></textarea>
+
+        <!-- Botón -->
+        <button type="submit" style="background:#e53935;color:white;padding:10px 20px;border:none;border-radius:8px;">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- 🧾 PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 Fútbol Fan — Diseñado para los amantes del fútbol.</p>
+    <p>Coloca tus imágenes en una carpeta llamada <strong>images</strong> junto al archivo index.html</p>
+  </footer>
+</body>
+</html>
